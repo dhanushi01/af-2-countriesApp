@@ -1,70 +1,111 @@
-# Getting Started with Create React App
+# 🌍 GEOATLAS - World Countries Explorer
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+[![Live Demo](https://img.shields.io/badge/Demo-Vercel-green)](https://geoatlas.vercel.app)
 
-## Available Scripts
+[![GitHub License](https://img.shields.io/badge/license-MIT-blue)](LICENSE)
 
-In the project directory, you can run:
+![App Screenshot](./public/screenshot.png)
 
-### `npm start`
+A responsive React application for exploring comprehensive country data using the REST Countries API.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## ✨ Features
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- **Advanced Search**
+  - By name, country code, currency, or language
+  - Real-time results with debouncing
+- **Smart Filtering**
+  - Region filter (Africa, Americas, Asia, etc.)
+  - Combined search+filter functionality
+- **Detailed Country Profiles**
+  - Flags, population, capital, languages
+  - Currency data with symbols
+  - Interactive Google Maps integration
+- **UI/UX**
+  - Fully responsive design
+  - Loading states and error handling
+  - Popular countries showcase
 
-### `npm test`
+## 🛠 Technologies
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+| Category        | Technologies Used |
+|-----------------|-------------------|
+| Frontend        | React, Vite       |
+| Styling         | Tailwind CSS      |
+| Routing         | React Router v6   |
+| API Client      | Axios             |
+| Hosting         | Vercel            |
 
-### `npm run build`
+## 🚀 Getting Started
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Prerequisites
+- Node.js (v18+ recommended)
+- npm (v9+ recommended)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Installation
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/yourusername/geoatlas.git
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+   Install dependencies:
+    cd geoatlas && npm install
+    
+    Start the development server:
+    npm run dev
 
-### `npm run eject`
+🌐 API Usage
+This application consumes 12+ endpoints from REST Countries API:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Endpoint	
+/all	Get all countries	getAllCountries()
+/name/{name}	Search by name	getCountryByName("canada")
+/alpha/{code}	Get by country code	getCountryByCode("us")
+/region/{region}	Filter by region	getCountriesByRegion("europe")
+/currency/{currency}	Filter by currency	getCountriesByCurrency("usd")
+/lang/{language}	Filter by language	getCountriesByLanguage("spanish")
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+📂 Project Structure
+geoatlas/
+├── public/            # Static assets
+├── src/
+│   ├── assets/        # Images/icons
+│   ├── components/    # Reusable UI
+│   │   ├── Navbar.jsx
+│   │   └── Footer.jsx
+│   ├── pages/         # Route components
+│   │   ├── HomePage.jsx
+│   │   ├── SearchPage.jsx
+│   │   └── CountryPage.jsx
+│   ├── services/      # API functions
+│   │   └── countries.js
+│   ├── App.jsx        # Main router
+│   └── main.jsx       # Entry point
+├── .gitignore
+├── package.json
+├── vite.config.js
+└── README.md
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+🧪 Testing
+Run unit tests:
+npm run test
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+🚀 Deployment
+Build for production:
+npm run build
 
-## Learn More
+Deploy to Vercel:
+vercel --prod
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+📝 Assignment Requirements Checklist
+Requirement	Status
+React Functional Components	✅ Implemented
+REST Countries API Integration	✅ 12+ endpoints
+CSS Framework (Tailwind)	✅ Fully utilized
+Search/Filter Functionality	✅ Advanced implementation
+Responsive Design	✅ Mobile-first approach
+Git Version Control	✅ Regular commits
+Documentation	✅ This README
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+📜 License
+This project is licensed under the MIT License - see the LICENSE file for details.
 
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Developed by Dhanushi Piyaratne

@@ -1,3 +1,4 @@
+
 import abt1 from '../assets/abt1.jpeg';
 import abt2 from '../assets/abt2.jpeg';
 import abt3 from '../assets/abt3.jpeg';
@@ -116,9 +117,6 @@ export default function AboutPage() {
             Start discovering countries with our powerful tools today. Perfect for students, 
             travelers, and geography enthusiasts.
           </p>
-          <button className="bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-6 rounded-lg transition-colors">
-            Try It Now
-          </button>
         </div>
       </div>
     </main>
