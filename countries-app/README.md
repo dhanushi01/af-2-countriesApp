@@ -1,10 +1,6 @@
 # 🌍 GEOATLAS - World Countries Explorer
 
-[![Live Demo](https://img.shields.io/badge/Demo-Vercel-green)](https://geoatlas.vercel.app)
-
-[![GitHub License](https://img.shields.io/badge/license-MIT-blue)](LICENSE)
-
-![App Screenshot](./public/screenshot.png)
+Deployed URL : https://af-2-countries-app-qeai.vercel.app/
 
 A responsive React application for exploring comprehensive country data using the REST Countries API.
 
